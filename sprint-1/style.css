@@ -1,0 +1,138 @@
+body{
+    background: rgb(175, 240, 77);
+    margin: 20px;
+}
+.main_content{
+    margin: 0 100px;
+}
+.home p{
+    justify-content: start;
+    color: rgb(17, 16, 16);
+    font-size: 25px;
+    font-family: 'Zhi Mang Xing', cursive;
+}
+.info{
+    text-align: center;
+    font-family: 'Zhi Mang Xing', cursive;
+}
+.box_1{
+    display: flex;
+    margin: auto;
+    width: 500px;
+}
+.box_1 a{
+    color: rgb(199, 23, 46);
+    text-align: center;
+    font-size: 30px;
+    background: royalblue;
+    border-radius: 10px/3px;
+    margin: 10px;
+    padding: 10px 0;
+    flex-basis: 200px;
+}
+.main_grid{
+    display: grid;
+    grid-template-columns: 70% auto;
+}
+.history{
+    display: grid;
+    grid-template-columns: 70% auto;
+    grid-template-rows: auto auto;
+    gap: 20px 20px;
+}
+.history img{
+    padding-top: 20px;
+    grid-column: 2/3;
+    border-radius: 15px/10px;
+    height: 200px;
+    width: 200px;
+}
+.history > div{
+    padding-left: 20px;
+}
+.history h2{
+    font-family: 'Zhi Mang Xing', cursive;
+}
+
+#history_1, #history_3, #history_5, #history_7, #history_9, #history_11{
+    background: royalblue;
+    padding-left: 20px;
+    border-radius: 10px/5px;
+}
+.photo_grid{
+    display: grid;
+    grid-template-columns: repeat(3, 240px);
+    grid-template-rows: auto;
+    gap: 40px  20px;
+}
+.photo_grid img {
+    height: 240px;
+    width: 240px;
+    margin: 20px 100px;
+    border-radius: 10px/5px;
+}
+/** Blog **/
+.blog{
+    display: grid;
+    grid-template-columns: 70% auto;
+    grid-row: auto;
+    gap: 20px 20px;
+    margin: 0 80px;
+}
+.blog p{
+    padding-left: 20px;
+    justify-content: center;
+}
+.personal{
+    display: grid;
+    grid-template-columns: 20px auto;
+    grid-template-rows: repeat(3, 50px) ;
+    margin-left: 20px;
+    background: royalblue;
+    padding:20px 0 0 20px;
+    border-radius: 10px/5px;
+}
+.personal img{
+    height: 20px;  
+}
+.personal p{
+    margin:0 0 0 10px;
+    font-size: 20px;
+
+}
+@media(max-width:992px){
+    .main_grid{
+        display: grid;
+        grid-template-columns: 70% auto;
+    }
+    .history{
+       display: grid;
+       grid-template-columns: auto;
+       grid-template-rows: auto;
+   }
+    .history image:nth-child(2n){
+       display: none;
+
+    }
+    .photo_grid{
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: auto;
+    }
+    .photo_grid:nth-child(4n){
+        display: flex;
+    }
+}
+@media(max_width:768px){
+    .box_1{
+        display: flex;
+        flex-direction: column;
+        }
+    .box_1 a:last-child{
+        display: none;
+    }    
+   .main_grid > .personal{
+        visibility: hidden;
+    }
+
+}
